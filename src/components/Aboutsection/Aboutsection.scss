@@ -1,0 +1,196 @@
+.join {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.about {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr); /* Clean 12-col layout */
+    grid-template-rows: repeat(12, 1fr);
+    gap: 8px;
+    padding: 20px;
+    font-family: 'Inter', sans-serif;
+    align-items: start;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #fafafa;
+
+    &__title {
+        grid-column: 1 / span 6; /* if you still want it across two columns */
+        grid-row: 1 / span 3;
+        font-family: 'Inter', sans-serif;
+        font-size: 18px; /* smoother scaling */
+        font-weight: 700;
+        line-height: 1.1;
+        margin: 0;
+        text-align: center;
+
+        &-writing {
+            margin: 0;
+            white-space: nowrap;
+        }
+      }
+
+        
+    &__description {
+        grid-column: 7 / span 6;
+        grid-row: 1 / span 4;
+        font-size: 12px;
+        line-height: 1.1;
+        margin: 0;
+    }
+
+    &__years {
+        grid-column: 7 / span 5;
+        grid-row: 4 / span 9;
+        font-weight: 700;
+
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        justify-content: flex-end;
+        gap: 1px;
+
+        &-number {
+            font-weight: 700;
+            font-style: italic;
+            font-size: clamp(8rem, 18vw, 10rem);
+            line-height: 1;
+            letter-spacing: -1px;
+            margin: 0;
+            padding: 0;
+            display: inline-block;
+          }
+
+        &-caption {
+            font-weight: 600;
+            font-size: clamp(5px, 1rem, 14px);
+            text-align: center;
+            margin-top: -15px;
+        }
+    }
+
+    &__photographer {
+        background-image: url('../Aboutsection/images/aboutsection-photo.jpg');
+
+        grid-column: 2 / span 5;
+        height: 100%;
+        grid-row: 3 / span 8;
+        background-size: cover;   
+        background-repeat: no-repeat;
+        background-position: center bottom;
+        border-radius: 6px;
+    }
+
+      
+}
+
+.what {
+    margin: 0 auto;
+    background-color: #fafafa;
+    padding: 0 20px;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.main-title {
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #000;
+    letter-spacing: -0.5px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 15px;
+    font-family: 'Inter', serif;
+
+    &-item {
+        background: #fafafa;
+        border: 1px solid black;
+        padding: 20px 15px;
+        text-align: center;
+        transition: all 0.3s ease;
+        position: relative;
+        min-height: 120px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+        z-index: 1;
+    
+        &.full-width {
+            grid-column: 1 / -1;
+            min-height: 100px;
+        }
+
+        &:before, &:after {
+            z-index: -1;
+            content: "";
+            position: absolute;
+            background: #fafafa;
+            transition: all .2s linear;
+            display: block;
+           }
+           
+           &:before {
+            width: calc(100% + 20px);
+            height: calc(100% - 90px);
+            top: 45px;
+            left: -10px;
+           }
+           
+           &:after {
+            width: calc(100% - 90px);
+            height: calc(100% + 20px);
+            top: -10px;
+            left: 45px;
+           }
+
+        
+        
+    }
+}
+
+.item {
+
+    &-number {
+        position: absolute;
+        top: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 18px;
+        font-weight: 600;
+        color: black;
+        font-style: italic;
+    }
+
+    &-title {
+        font-size: 18px;
+        font-weight: 700;
+        color: #000;
+        margin-bottom: 8px;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        line-height: 1;
+    }
+
+    &-description {
+        font-size: 12px;
+        color: black;
+        line-height: 1.1;
+    }
+
+}
+
+

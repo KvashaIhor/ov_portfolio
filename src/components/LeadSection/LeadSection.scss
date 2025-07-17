@@ -1,0 +1,78 @@
+.leaverequest {
+    position: relative;
+    padding: 0 30px;
+    border: 1px solid #000;
+    color: black;
+    background: #fafafa;
+    user-select: none;
+    white-space: nowrap;
+    transition: all .05s linear;
+    font-family: inherit;
+    display: flex;                  // ⬅️ layout fix
+    justify-content: center;       // ⬅️ center horizontally
+    align-items: center; 
+   }
+   
+   .leaverequest:before, .leaverequest:after {
+    content: "";
+    position: absolute;
+    background: #fafafa;
+    transition: all .2s linear;
+   }
+   
+   .leaverequest:before {
+    width: calc(100% + 20px);
+    height: calc(100% - 24px);
+    top: 12px;
+    left: -10px;
+   }
+   
+   .leaverequest:after {
+    width: calc(100% - 24px);
+    height: calc(100% + 12px);
+    top: -6px;
+    left: 12px;
+   }
+   
+   .leaverequest:hover {
+    cursor: crosshair;
+    background-color: #f7f7f7;
+   }
+   
+   .leaverequest:active {
+    transform: scale(0.95);
+   }
+   
+   .leaverequest:hover:before {
+    height: calc(100% - 36px);
+    background-color: #f7f7f7;
+    top: 18px;
+   }
+   
+   .leaverequest:hover:after {
+    width: calc(100% - 36px);
+    background-color: #f7f7f7;
+    left: 18px;
+   }
+   
+   .leaverequest span {
+    font-size: 15px;
+    z-index: 3;
+    position: relative;
+    font-weight: 600;
+    transition: all .2s linear;
+  }
+  
+  .leaverequest:hover span {
+    font-size: 16px;
+  }
+
+  .leadform-fullscreen {
+    min-height: 100vh;
+    display: flex;
+    align-items: flex-start;    // align content to the top
+    justify-content: center;
+    padding-top: 64px;          // space from the top (adjust as needed)
+    background: #f6f6f6;
+  }
+  
