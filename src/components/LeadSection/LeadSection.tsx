@@ -8,6 +8,8 @@ import MenuItem from '../../../node_modules/@mui/material/MenuItem';
 import FormControl from '../../../node_modules/@mui/material/FormControl';
 import Select, { SelectChangeEvent } from '../../../node_modules/@mui/material/Select';
 import './LeadSection.scss'
+import { Footer } from "../Footer/Footer";
+import { sendToTelegram } from "../../utils/sendToTelegram";
 
 
 const shootTypes = [
@@ -57,18 +59,38 @@ export default function PortfolioLeadForm() {
 
   if (submitted)
     return (
-      <div className="leadform-fullscreen">
+      <div className="leadform-fullscreen flex flex-col min-h-screen items-center">
         <div className="max-w-md mx-auto mt-10 p-6 bg-white text-center">
         <h2 className="text-xl font-bold mb-2">Thank you!</h2>
         <p className="text-gray-700">Your inquiry was received. I’ll get back to you soon.</p>
       </div>
+
+      <Footer/>
       </div>
     );
 
   return (
-    <div className="leadform-fullscreen"><form
-  className="w-full max-w-xl mx-auto mt-10 p-6 space-y-4 sm:mx-5"
-  onSubmit={handleSubmit}
+    <div className="leadform-fullscreen min-h-screen flex flex-col justify-center items-center w-full">
+  <form className="w-full max-w-xl p-6 space-y-4 sm:mx-5 items-center"
+  onSubmit={async (e) => {
+    e.preventDefault();
+  
+    const form = e.currentTarget;
+    const formData = {
+      name: (form.elements.namedItem('name') as HTMLInputElement).value,
+      email: (form.elements.namedItem('email') as HTMLInputElement).value,
+      phone: (form.elements.namedItem('phone') as HTMLInputElement).value,
+      service: (form.elements.namedItem('Services') as HTMLSelectElement).value,
+      message: (form.elements.namedItem('Message') as HTMLTextAreaElement).value,
+    };
+  
+    const sent = await sendToTelegram(formData);
+    if (sent) {
+      setSubmitted(true);
+    } else {
+      alert('Something went wrong. Please try again later.');
+    }
+  }}
 >
       <h2 className="text-2xl font-bold mb-2 text-center">LET'S TALK ABOUT YOUR SHOOT</h2>
       {error && <div className="text-red-600 text-sm">{error}</div>}
@@ -199,6 +221,7 @@ export default function PortfolioLeadForm() {
                     </span>
       </Button>
     </form>
+    <Footer/>
     </div>
   );
 }

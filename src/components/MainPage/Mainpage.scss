@@ -40,7 +40,7 @@
     gap: 3px;
     position: absolute;
     left: 30px;
-    top: 30px;
+    top: 55px;
 
     &__circle {
             width: 8px;
@@ -66,7 +66,7 @@
     background-position: center;
     position: absolute;
     right: 30px;
-    top: 25px;
+    top: 50px;
   }
 @keyframes flash {
     0%, 100% {
@@ -85,14 +85,14 @@
     border: 2px solid #1a1a1a;
 
     &--tl {
-        top: 20px;
+        top: 45px;
         left: 20px;
         border-right: none;
         border-bottom: none;
     }
 
     &--tr {
-        top: 20px;
+        top: 45px;
         right: 20px;
         border-left: none;
         border-bottom: none;
@@ -123,91 +123,8 @@
     background-position: center;
     background-size: cover;
     position: relative;
-    z-index: 1;
     height: 100vh !important;
 
-  
-    &__addresses {
-      display: none;
-      flex-direction: column;
-      gap: 8px;
-      visibility: hidden;
-      opacity: 0;
-      transform: translateY(10px);
-      transition: opacity 0.3s ease, transform 0.3s ease;
-  
-      .header__numbers-wrapper:hover & {
-        opacity: 1;
-        visibility: visible;
-        transform: translateY(0);
-      }
-    }
-  
-    &__numbers-wrapper {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      gap: 8px;
-    }
-  
-    &__names, &__phone {
-      color: black;
-      outline: none;
-      text-decoration: none;
-      font-weight: 700;
-      font-size: 16px;
-      font-family: Inter, 'serif';
-    }
-  
-    &__icons {
-      display: flex;
-      align-items: center;
-      position: absolute;
-      top: 15px;
-      left: 20px;
-      right: 20px;
-      justify-content: space-between;
-  
-      &--right {
-        display: flex;
-        align-items: center;
-        gap: 24px;
-      }
-    }
-  
-    &__icon {
-      width: 24px;
-      height: 24px;
-  
-      &--main {
-        display: flex;
-        width: 64px;
-        height: 46px;
-        font-size: 16px;
-        color: black;
-        text-decoration: none;
-        font-weight: 700;
-        align-items: center;
-        text-align: left;
-
-        &__menu {
-            width: 64px;
-            height: 46px;
-            font-size: 16px;
-            color: black;
-            text-decoration: none;
-          }
-      }
-
-      &--main__menu {
-        width: 64px;
-        height: 46px;
-        font-size: 16px;
-        color: #fafafa;
-        text-decoration: none;
-        text-transform: none;
-      }
-    }
 
     &__titles {
         display: flex;
@@ -254,93 +171,7 @@
         padding-left: 20px;
     }
   }
-  
-  .menu {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 100svh;
-    background-color: #1a1a1a;
-    transform: translateX(200%);
-    transition: transform 0.5s ease-in-out;
-    font-weight: 700;
-    z-index: 9999;
-    text-transform: uppercase;
-    color: #fafafa;
-    box-sizing: border-box;
-    width: 100vw;
-    overflow-y: auto;
-  
-    &--open {
-      transform: translateX(0);
-    }
-  
-    &__icons {
-      display: flex;
-      align-items: center;
-      padding: 20px;
-      justify-content: space-between;
-    }
-  
-    &__icon {
-      width: 24px;
-      height: 24px;
-  
-      &--main {
-        width: 64px;
-        height: 46px;
-      }
-    }
-  
-    &__names {
-      padding: 0;
-      margin: 0;
-    }
-  
-    &__phone {
-      display: inline-block;
-      color: inherit;
-      text-decoration: none;
-      transition: transform 0.3s ease;
-  
-      &:hover {
-        color: #e6e6e6;
-        transform: scale(1.1);
-      }
-    }
-  
-    &__addresses {
-      display: flex;
-      flex-direction: column;
-      padding: 20px;
-      gap: 8px;
-      font-size: 16px;
-      transition: transform 0.3s ease;
-  
-      &:hover {
-        color: #e6e6e6;
-      }
-    }
-  
-    &__call {
-      display: flex;
-      text-decoration: none;
-      color: inherit;
-      font-size: 12px;
-      margin: 20px;
-      padding-bottom: 8px;
-      letter-spacing: 2px;
-      border-bottom: 1px solid white;
-      width: fit-content;
-      transition: transform 0.3s ease;
-  
-      &:hover {
-        transform: scale(1.1);
-        cursor: pointer;
-      }
-    }
-  }
+
   
   .nav {
     &__list {
@@ -480,26 +311,19 @@
     top: -3px;
     left: 6px;
    }
+
+   .contactme:hover:before,
+   .contactme:hover:after {
+     opacity: 0;
+   }
    
    .contactme:hover {
-    cursor: crosshair;
-    background-color: #f7f7f7;
+    cursor: pointer;
+    background-color: black;
    }
    
    .contactme:active {
     transform: scale(0.95);
-   }
-   
-   .contactme:hover:before {
-    height: calc(100% - 24px);
-    background-color: #f7f7f7;
-    top: 12px;
-   }
-   
-   .contactme:hover:after {
-    width: calc(100% - 24px);
-    background-color: #f7f7f7;
-    left: 12px;
    }
    
    .contactme span {
@@ -509,6 +333,12 @@
     font-weight: 600;
    } 
 
+   .contactme:hover span {
+     font-size: 16px;
+     transition: 0.2s linear;
+     color: white;
+   }
+
    @media (max-height: 875px) {
     .hero {
       &__photographer {
@@ -516,4 +346,12 @@
       }
     }
   }
-   
+
+  .navbar-sticky {
+    width: 100%;
+    display: block;  /* or flex, but use justify-content: center/space-between as needed */
+    position: relative; /* Or static, as needed */
+    left: 0;  /* Ensures not shifted by parent */
+    }
+
+  
