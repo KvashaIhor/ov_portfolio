@@ -12,11 +12,11 @@ import { Footer } from "./components/Footer/Footer";
 
 function App() {
   const [isOpenMenu, setIsOpenMenu] = useState(false);
-  const [isLeadFormOpen, setIsLeadFormOpen] = useState(true);
+  const [isLeadFormOpen, setIsLeadFormOpen] = useState(false);
 
   return (
     <div style={{ display: "flex", flexDirection: "column" }}>
-      <Mainpage isOpenMenu={isOpenMenu} handleMenuChange={setIsOpenMenu}/>
+      <Mainpage isOpenMenu={isOpenMenu} handleMenuChange={setIsOpenMenu} handleOpenModal={setIsLeadFormOpen}/>
       <Aboutsection />
       <TypesSection />
       <PortfolioSection />

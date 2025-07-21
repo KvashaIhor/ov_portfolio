@@ -2,7 +2,11 @@ import React, { useState } from 'react';
 import logo from '../../images/renuit_logo.png'
 import './Navbar.css';
 
-export const Navbar = () => {
+type NavbarProps = {
+    handleModal: (value: boolean) => void;
+  };
+  
+  export const Navbar: React.FC<NavbarProps> = ({ handleModal }) => {
     const [menuOpen, setMenuOpen] = useState(false);
 
     const toggleMenu = () => {
@@ -49,9 +53,8 @@ export const Navbar = () => {
                         </ul>
                     </div>
                 </nav>
-                <button className = "contactheader">
-                    <span> CONTACT ME
-                    </span>
+                <button className = "contactheader" onClick = {() => handleModal(true)}>
+                                    <span>CONTACT ME</span>
                 </button>
             </div>
         </header>
