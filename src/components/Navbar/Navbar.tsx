@@ -32,17 +32,17 @@ export const Navbar = () => {
                                 </a>
                             </li>
                             <li className="cs-li">
-                                <a href="#team" className="cs-li-link">
+                                <a href="#aboutme" className="cs-li-link">
                                     ABOUT ME
                                 </a>
                             </li>
                             <li className="cs-li">
                                 <a href="#services" className="cs-li-link">
-                                    SERVICE
+                                    SERVICES
                                 </a>
                             </li>
                             <li className="cs-li">
-                                <a href="#services" className="cs-li-link">
+                                <a href="#portfolio" className="cs-li-link">
                                     PORTFOLIO
                                 </a>
                             </li>

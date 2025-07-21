@@ -3,7 +3,7 @@ import './TypesSection.scss';
 export const TypesSection = () => {
     return (
         <>
-        <div className="types">
+        <div className="types" id="services">
         <h1 className="main-title">SO WHAT DO YOU NEED?</h1>
         
         <div className="services-list">

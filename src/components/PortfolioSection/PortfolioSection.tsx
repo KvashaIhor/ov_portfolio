@@ -18,7 +18,7 @@ export const PortfolioSection = () => {
     const [currentPhotosDisplay, setCurrentPhotosDisplay] = useState(commercialSet);
 
     return (
-        <div className="portfolio">
+        <div className="portfolio" id="portfolio">
         <div className="headerport">
             <h1>PORTFOLIO</h1>
             <div className="nav-tabs">

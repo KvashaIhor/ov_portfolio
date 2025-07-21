@@ -33,16 +33,16 @@
 
    
    .leaverequest:before {
-    width: calc(100% + 4px);
+    width: calc(100% + 2px);
     height: calc(100% - 24px);
     top: 12px;
-    left: -2px;
+    left: -1px;
    }
    
    .leaverequest:after {
     width: calc(100% - 24px);
-    height: calc(100% + 4px);
-    top: -2px;
+    height: calc(100% + 2px);
+    top: -1px;
     left: 12px;
    }
    
@@ -131,5 +131,15 @@
   .spacer {
     height: 100px;
   }
+
+  .leaverequest:before {
+    width: calc(100% + 4px);
+    left: -2px;
+   }
+   
+   .leaverequest:after {
+    height: calc(100% + 4px);
+    top: -2px;
+   }
 }
   

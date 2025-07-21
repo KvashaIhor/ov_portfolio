@@ -57,7 +57,7 @@ export default function PortfolioLeadForm() {
 
   if (submitted)
     return (
-      <div className="leadform-fullscreen flex flex-col min-h-screen items-center">
+      <div className="leadform-fullscreen flex flex-col min-h-screen items-center" id="leadform">
         <div className="max-w-md mx-auto mt-10 p-6 bg-white text-center">
         <h2 className="text-xl font-bold mb-2">Thank you!</h2>
         <p className="text-gray-700">Your inquiry was received. I’ll get back to you soon.</p>
@@ -216,8 +216,6 @@ export default function PortfolioLeadForm() {
                     </span>
       </Button>
     </form>
-    <div className="spacer"></div>
-    <Footer/>
     </div>
   );
 }
