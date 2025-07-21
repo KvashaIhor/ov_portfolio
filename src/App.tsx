@@ -15,7 +15,7 @@ function App() {
       <Mainpage isOpenMenu={isOpenMenu} handleMenuChange={setIsOpenMenu}/>
       <Aboutsection />
       <TypesSection />
-  <PortfolioSection />
+      <PortfolioSection />
       <PortfolioLeadForm />
     </div>
 );}

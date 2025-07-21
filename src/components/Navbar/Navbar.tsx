@@ -14,7 +14,7 @@ export const Navbar = () => {
         <header id="cs-navigation" className={menuOpen ? 'cs-active' : ''}>
             <div className="cs-container">
                 <a href="" className="cs-logo" aria-label="back to home">
-                    <span>Olena Vynohradova</span>
+                    <span><strong>Olena Vynohradova</strong></span>
                 </a>
                 <nav className="cs-nav" role="navigation">
                     <button className={`cs-toggle ${menuOpen ? 'cs-active' : ''}`} onClick={toggleMenu} aria-label="mobile menu toggle">
@@ -28,17 +28,22 @@ export const Navbar = () => {
                         <ul id="cs-expanded" className="cs-ul" aria-expanded="false">
                             <li className="cs-li">
                                 <a href="#" className="cs-li-link cs-active">
-                                    Home
+                                    HOME
                                 </a>
                             </li>
                             <li className="cs-li">
                                 <a href="#team" className="cs-li-link">
-                                    Mission
+                                    ABOUT ME
                                 </a>
                             </li>
                             <li className="cs-li">
                                 <a href="#services" className="cs-li-link">
-                                    Services
+                                    SERVICE
+                                </a>
+                            </li>
+                            <li className="cs-li">
+                                <a href="#services" className="cs-li-link">
+                                    PORTFOLIO
                                 </a>
                             </li>
                         </ul>

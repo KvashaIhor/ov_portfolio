@@ -38,9 +38,10 @@ export const PortfolioSection = () => {
                 }}>WEDDINGS</div>
             </div>
         </div>
-        <div className="w-full max-w-screen-xl mx-auto space-y-2 p-4">
+        {/* Mobile Block */}
+        <div className="gallerymobile w-full max-w-screen-xl mx-auto space-y-2 p-4">
   {/* Full Width Block */}
-  <div className="w-full h-64 relative overflow-hidden">
+  <div className="image-large">
   <img src={currentPhotosDisplay[0]} className="absolute inset-0 w-full h-full object-cover" alt="" />
   </div>
 
@@ -55,7 +56,7 @@ export const PortfolioSection = () => {
   </div>
 
   {/* Full Width Block */}
-  <div className="w-full h-64 md:h-[500px] bg-gray-500 relative overflow-hidden">
+  <div className="image-large">
   <img src={currentPhotosDisplay[3]} className="absolute inset-0 w-full h-full object-cover" alt="" />
   </div>
 
@@ -68,6 +69,34 @@ export const PortfolioSection = () => {
     <img src={currentPhotosDisplay[5]} className="absolute inset-0 w-full h-full object-cover" alt="" />
     </div>
   </div>
+</div>
+        {/* Desktop Block */}
+        <div className="galleryfull">
+  {/* Full Width Block */}
+  <div className="image-large">
+  <img src={currentPhotosDisplay[0]} className="picture" alt="" />
+  </div>
+
+  <div className="image-medium-1">
+  <img src={currentPhotosDisplay[0]} className="picture" alt="" />
+  </div>
+
+  <div className="image-small-1">
+  <img src={currentPhotosDisplay[0]} className="picture" alt="" />
+  </div>
+
+  <div className="image-small-2">
+  <img src={currentPhotosDisplay[0]} className="picture" alt="" />
+  </div>
+
+  <div className="image-medium-3">
+  <img src={currentPhotosDisplay[0]} className="picture" alt="" />
+  </div>
+
+  <div className="image-medium-4">
+  <img src={currentPhotosDisplay[0]} className="picture" alt="" />
+  </div>
+  
 </div>
 
 

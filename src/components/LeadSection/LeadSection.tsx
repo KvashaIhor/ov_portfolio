@@ -25,10 +25,8 @@ export default function PortfolioLeadForm() {
 
   const [form, setForm] = useState({
     name: "",
-    email: "",
     phone: "",
     type: "",
-    date: "",
     message: "",
   });
   const [error, setError] = useState("");
@@ -50,7 +48,7 @@ export default function PortfolioLeadForm() {
 
   function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    if (!form.name || !form.email || !form.type) {
+    if (!form.name || !form.phone) {
       setError("Please fill out all required fields.");
       return;
     }
@@ -64,7 +62,7 @@ export default function PortfolioLeadForm() {
         <h2 className="text-xl font-bold mb-2">Thank you!</h2>
         <p className="text-gray-700">Your inquiry was received. I’ll get back to you soon.</p>
       </div>
-
+      <div className="spacer"></div>
       <Footer/>
       </div>
     );
@@ -75,15 +73,12 @@ export default function PortfolioLeadForm() {
   onSubmit={async (e) => {
     e.preventDefault();
   
-    const form = e.currentTarget;
     const formData = {
-      name: (form.elements.namedItem('name') as HTMLInputElement).value,
-      email: (form.elements.namedItem('email') as HTMLInputElement).value,
-      phone: (form.elements.namedItem('phone') as HTMLInputElement).value,
-      service: (form.elements.namedItem('Services') as HTMLSelectElement).value,
-      message: (form.elements.namedItem('Message') as HTMLTextAreaElement).value,
+      name: form.name,
+      phone: form.phone,
+      service: form.type, // 'type' in state matches the select
+      message: form.message,
     };
-  
     const sent = await sendToTelegram(formData);
     if (sent) {
       setSubmitted(true);
@@ -96,7 +91,7 @@ export default function PortfolioLeadForm() {
       {error && <div className="text-red-600 text-sm">{error}</div>}
 
       <div className="space-y-1">
-        <Label htmlFor="name">
+        <Label htmlFor="name" className = "fieldlabel">
           Name:<span className="text-red-500">*</span>
         </Label>
         <Input
@@ -106,7 +101,7 @@ export default function PortfolioLeadForm() {
           value={form.name}
           onChange={handleChange}
           required
-          className = "rounded-none border border-black"
+          className = "rounded-none border border-black field"
         />
       </div>
 
@@ -127,7 +122,7 @@ export default function PortfolioLeadForm() {
   </div>*/}
 
       <div className="space-y-1">
-        <Label htmlFor="phone">Phone number:<span className="text-red-500">*</span></Label>
+        <Label htmlFor="phone" className = "fieldlabel">Phone number:<span className="text-red-500">*</span></Label>
         <Input
           id="phone"
           name="phone"
@@ -135,7 +130,7 @@ export default function PortfolioLeadForm() {
           value={form.phone}
           onChange={handleChange}
           placeholder="(000) 000-0000"
-          className = "rounded-none border border-black"
+          className = "rounded-none border border-black field"
         />
       </div>
 
@@ -161,7 +156,7 @@ export default function PortfolioLeadForm() {
     },
   }}
 >
-  <InputLabel id="type-select-label" sx={{color: 'black', '&.Mui-focused': { color: 'black' }}}>
+  <InputLabel id="type-select-label" className = "fieldlabel" sx={{color: 'black', '&.Mui-focused': { color: 'black' }}}>
     Type of shoot
   </InputLabel>
   <Select
@@ -205,14 +200,14 @@ export default function PortfolioLeadForm() {
     </div>*/}
 
       <div className="space-y-1">
-        <Label htmlFor="message">Comments</Label>
+        <Label className = "fieldlabel" htmlFor="message">Comment:</Label>
         <Textarea
           id="message"
           name="message"
           rows={4}
           value={form.message}
           onChange={handleChange}
-          className = "rounded-none border border-black"
+          className = "rounded-none border border-black commentfield"
         />
       </div>
 
@@ -221,6 +216,7 @@ export default function PortfolioLeadForm() {
                     </span>
       </Button>
     </form>
+    <div className="spacer"></div>
     <Footer/>
     </div>
   );

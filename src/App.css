@@ -1,5 +1,5 @@
 html, body, #root {
-    height: 100%; /* Important for height to propagate down */
+    height: 100vw; /* Important for height to propagate down */
     overflow-x: hidden; /* Prevent horizontal scroll */
     background-color: #fafafa;
   }

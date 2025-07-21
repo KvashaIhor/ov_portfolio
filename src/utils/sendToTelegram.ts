@@ -1,7 +1,6 @@
 // utils/sendToTelegram.ts
 export const sendToTelegram = async (formData: {
     name: string;
-    email: string;
     phone: string;
     service: string;
     message: string;
@@ -12,7 +11,6 @@ export const sendToTelegram = async (formData: {
     const text = `
   📬 *New Contact Form Submission*
   👤 *Name:* ${formData.name}
-  📧 *Email:* ${formData.email}
   📞 *Phone:* ${formData.phone}
   📦 *Service:* ${formData.service}
   📝 *Message:*\n${formData.message}

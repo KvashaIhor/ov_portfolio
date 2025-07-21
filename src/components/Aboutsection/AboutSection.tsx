@@ -9,7 +9,7 @@ export const Aboutsection = () => {
             <h1 className="about__title-writing">ABOUT ME</h1>
         </div>
         <p className="about__description">
-        My name is Olena, and I’m a photographer with an artistic approach. Each of my shots is not just a photo, but a story that will stay with you forever.
+        My name is Olena, and I’m a photographer with an artistic approach.<br/>Each of my shots is not just a photo, but a story that will stay with you forever.
         </p>
         <div className="about__photographer"></div>
         <p className="about__years">
@@ -28,7 +28,7 @@ export const Aboutsection = () => {
             </div>
             
             <div className="grid-item">
-                <div className="item-number">02</div>
+                <div className="item-number item-number-moving">02</div>
                 <div className="item-title">INDIVIDUAL APPROACH</div>
                 <div className="item-description">For me it's important that every client gets exactly what they want</div>
             </div>
@@ -40,13 +40,19 @@ export const Aboutsection = () => {
             </div>
             
             <div className="grid-item">
-                <div className="item-number">04</div>
+                <div className="item-number item-number-moving">04</div>
                 <div className="item-title">MODERN EQUIPMENT</div>
                 <div className="item-description">I work with professional equipment and studio</div>
             </div>
+
+            <div className="grid-item grid-item-5">
+            <div className="item-number">05</div>
+                <div className="item-title">CREATING ATMOSPHERE</div>
+                <div className="item-description">My clients are filled with their atmosphere and emotions</div>
+            </div>
         </div>
         
-        <div className="grid">
+        <div className="grid-2">
             <div className="grid-item full-width">
                 <div className="item-number">05</div>
                 <div className="item-title">CREATING ATMOSPHERE</div>

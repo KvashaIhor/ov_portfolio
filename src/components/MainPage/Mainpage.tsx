@@ -1,9 +1,5 @@
 import React, { useEffect, useState } from "react"
 import './Mainpage.scss'
-import iconMenu from '../../icons/icon-menu.png';
-import iconPhone  from '../../icons/icon-phone-call.png';
-import iconClose  from '../../icons/close.png';
-import iconBattery from '../../icons/battery.png'
 import {startTimer} from '../../utils/timer';
 import useFixVH from "../../utils/useFixVH";
 import { ContainerTextFlip } from "../ui/containter-text-flip";

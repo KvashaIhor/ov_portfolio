@@ -193,4 +193,106 @@
 
 }
 
+.grid-item-5 {
+    display: none;
+}
 
+@media (min-width: 1023px) {
+    .about {
+        height: 100vh;
+        padding: 40px;
+        gap: 16px;
+        grid-template-columns: repeat(10, 1fr); /* Clean 12-col layout */
+        grid-template-rows: repeat(10, 1fr);
+
+        &__title {
+            grid-column: 1 / span 5; /* if you still want it across two columns */
+            grid-row: 1 / span 3;
+            font-size: 80px;
+            text-align: right;
+            align-self: end;
+            grid-row: 1 / span 2;
+          }
+
+        &__description {
+            grid-column: 6 / span 4;
+            grid-row: 1 / span 2;
+            font-size: 20px;
+            align-self: end;
+        }
+
+        &__photographer {
+    
+            grid-column: 3 / span 3;
+            height: 100%;
+            grid-row: 3 / span 7;
+            align-items: right;
+        }
+
+        &__years {
+            grid-column: 6 / span 5;
+            grid-row: 3 / span 7;
+            font-weight: 700;
+            justify-content: flex-end;
+    
+            &-number {
+                font-weight: 700;
+                font-style: italic;
+                font-size: 450px;
+                line-height: 1;
+                letter-spacing: -1px;
+                margin: 0;
+                padding: 0;
+                display: inline-block;
+              }
+    
+            &-caption {
+                font-weight: 600;
+                font-size: 32px;
+                text-align: left;
+                margin-top: -40px;
+                margin-left: 20px;
+            }
+        }
+    }
+
+    .grid {
+        display: flex;
+        margin: 40px;
+        gap: 0px;
+
+        &-2 {
+            display: none;
+        }
+
+        &-item {
+            width: calc((100vw - 80px)/5);
+            height: 200px;
+        }
+    }
+
+    .grid-item-5 {
+        display: flex;
+    }
+
+    .item {
+
+        &-number {
+            font-size: 24px;
+            top: -15px;
+        }
+
+        &-number-moving {
+            top: 184px;
+        }
+    
+        &-title {
+            font-size: 20px;
+        }
+
+        &-description {
+            font-size: 14px;
+        }
+}
+
+}

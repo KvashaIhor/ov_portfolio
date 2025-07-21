@@ -13,7 +13,7 @@
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
     #cs-footer-272 {
-        padding: var(--sectionPadding);
+        padding-bottom: 50px;
         /* Navigation Links */
         /* Contact Links */
     }
@@ -22,6 +22,7 @@
         /* reset on tablet */
         max-width: 34.375rem;
         margin: auto;
+        padding: 20px;
         display: flex;
         justify-content: flex-start;
         align-items: flex-start;
@@ -98,7 +99,7 @@
     }
     #cs-footer-272 .cs-nav-li {
         list-style: none;
-        margin-bottom: 1rem;
+        margin-bottom: 0.3rem;
     }
     #cs-footer-272 .cs-nav-li:last-of-type {
         margin-bottom: 0;
@@ -188,10 +189,19 @@
   }
   /* Small Desktop - 1024px */
   @media only screen and (min-width: 64rem) {
+    #cs-footer-272 {
+        width: 100%;
+        padding: 40px;
+        box-shadow: 0 -5px 8px rgba(0,0,0,0.02);
+    }
+
     #cs-footer-272 .cs-container {
         /* pushes all flex children to the top */
         align-items: flex-start;
-        justify-content: flex-end;
+        justify-content:space-between;
+        font-size: 18px;
+        max-width: 100rem;
+        column-gap: 13rem
     }
     #cs-footer-272 .cs-logo-group {
         /* pushes everything to the right of it as far as possible in a flexbox */
@@ -211,6 +221,13 @@
     #cs-footer-272 .cs-contact {
         width: auto;
     }
+    #cs-footer-272 .cs-header:after {
+        content: "";
+        width: 5rem;
+        margin: 10px 0;
+        height: 2px;
+    }
+    
   }
   /* Dark Mode */
   @media only screen and (min-width: 0rem) {
@@ -233,5 +250,19 @@
         color: #b4b2c7;
     }
   }
+
+.logo {
+    height: 18px;
+}
+
+.brand {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.lilspacer {
+    width: 5px;
+}
   
                                 

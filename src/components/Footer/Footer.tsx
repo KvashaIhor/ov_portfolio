@@ -1,5 +1,6 @@
 import React from 'react';
 import './Footer.css';
+import nexaDevLogo from "../Footer/nexadev_logo.png"
 
 export const Footer = () => {
     return (
@@ -7,31 +8,31 @@ export const Footer = () => {
     <div className="cs-container">
         <ul className="cs-nav">
             <li className="cs-nav-li">
-                <span className="cs-header">Sitemap</span>
+                <span className="cs-header">SITEMAP</span>
             </li>
             <li className="cs-nav-li">
-                <a className="cs-nav-link" href="#">Home</a>
+                <a className="cs-nav-link" href="#">HOME</a>
             </li>
             <li className="cs-nav-li">
-                <a className="cs-nav-link" href="#mission">About Me</a>
+                <a className="cs-nav-link" href="#mission">ABOUT ME</a>
             </li>
             <li className="cs-nav-li">
-                <a className="cs-nav-link" href="#services">Services</a>
+                <a className="cs-nav-link" href="#services">SERVICES</a>
             </li>
             <li className="cs-nav-li">
-                <a className="cs-nav-link" href="#services">Portfolio</a>
+                <a className="cs-nav-link" href="#services">PORTFOLIO</a>
             </li>
             <li className="cs-nav-li">
-                <a className="cs-nav-link" href="#contact">Contact form</a>
+                <a className="cs-nav-link" href="#contact">CONTACT FORM</a>
             </li>
         </ul>
         <ul className="cs-contact">
             <li className="cs-nav-li">
-                <span className="cs-header">Contact</span>
+                <span className="cs-header">CONTACT INFORMATION</span>
             </li>
             <li className="cs-contact-li">
                 <a className="cs-contact-link cs-address" href="">
-                Seattle, WA
+                SEATTLE, WA
                 </a>
             </li>
             <li className="cs-contact-li">
@@ -41,6 +42,7 @@ export const Footer = () => {
                 <a className="cs-contact-link" href="mailto:info@vynohradovashoots.com">info@vynohradovashoots.com</a>
             </li>
         </ul>
+        <span className="brand">Powered by <div className="lilspacer"></div><img src={nexaDevLogo} className="logo" alt="" /><strong>exaDev</strong></span>
     </div>
 </footer>
                                 

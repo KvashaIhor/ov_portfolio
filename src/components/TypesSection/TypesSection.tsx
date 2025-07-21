@@ -12,7 +12,7 @@ export const TypesSection = () => {
                 <div className="service-content">
                     <div className="service-category">Selection of processed photographs in an artistic style</div>
                     <div className="service-title">PERSONAL PHOTOSHOOT</div>
-                    <div className="service-description">Individual portrait sessions, artistic projects, creation of visual concepts</div>
+                    <div className="service-description">Individual portrait sessions,<br/>artistic projects, creation of visual concepts</div>
                 </div>
                 <div className="service-icon">
                     <svg viewBox="0 0 24 24">
@@ -28,7 +28,7 @@ export const TypesSection = () => {
                 <div className="service-content">
                     <div className="service-category">Content for marketing and corporate projects</div>
                     <div className="service-title">COMMERCIAL PHOTOGRAPHY</div>
-                    <div className="service-description">Product shoots, employee photos, interior shots, images for marketing purposes</div>
+                    <div className="service-description">Product shoots, employee photos, interior shots,<br/>images for marketing purposes</div>
                 </div>
                 <div className="service-icon">
                     <svg viewBox="0 0 24 24">
@@ -43,7 +43,7 @@ export const TypesSection = () => {
                 <div className="service-content">
                     <div className="service-category">Professional photos in just a few minutes</div>
                     <div className="service-title">DOCUMENT PHOTOS</div>
-                    <div className="service-description">Formal photos for passport, resume, natural retouching without changing appearance</div>
+                    <div className="service-description">Formal photos for passport, resume,<br/>natural retouching without changing appearance</div>
                 </div>
                 <div className="service-icon">
                     <svg viewBox="0 0 24 24">
@@ -61,7 +61,7 @@ export const TypesSection = () => {
                 <div className="service-content">
                     <div className="service-category">Delicate retouching for a flawless result</div>
                     <div className="service-title">PROFESSIONAL EDITING</div>
-                    <div className="service-description">Editing of finished photos: color correction, defect removal, artistic stylization</div>
+                    <div className="service-description">Editing of finished photos: color correction,<br/>defect removal, artistic stylization</div>
                 </div>
                 <div className="service-icon">
                     <svg viewBox="0 0 24 24">
