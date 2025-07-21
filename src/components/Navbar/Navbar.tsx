@@ -4,9 +4,11 @@ import './Navbar.css';
 
 type NavbarProps = {
     handleModal: (value: boolean) => void;
+    scrollToSection: (section: string) => void;
+    activeSection: string;
   };
   
-  export const Navbar: React.FC<NavbarProps> = ({ handleModal }) => {
+  export const Navbar: React.FC<NavbarProps> = ({ handleModal, scrollToSection, activeSection }) => {
     const [menuOpen, setMenuOpen] = useState(false);
 
     const toggleMenu = () => {
@@ -30,25 +32,25 @@ type NavbarProps = {
                     </button>
                      <div className="cs-ul-wrapper">
                         <ul id="cs-expanded" className="cs-ul" aria-expanded="false">
-                            <li className="cs-li">
-                                <a href="#" className="cs-li-link cs-active">
+                            <li className="cs-li" onClick={() => scrollToSection("home")}>
+                            <button className={`cs-li-link ${activeSection === 'home' ? 'cs-active' : ''}`}>
                                     HOME
-                                </a>
+                                </button>
                             </li>
-                            <li className="cs-li">
-                                <a href="#aboutme" className="cs-li-link">
+                            <li className="cs-li" onClick={() => scrollToSection("about")}>
+                            <button className={`cs-li-link ${activeSection === 'about' ? 'cs-active' : ''}`}>
                                     ABOUT ME
-                                </a>
+                                </button>
                             </li>
-                            <li className="cs-li">
-                                <a href="#services" className="cs-li-link">
+                            <li className="cs-li" onClick={() => scrollToSection("services")}>
+                            <button className={`cs-li-link ${activeSection === 'services' ? 'cs-active' : ''}`}>
                                     SERVICES
-                                </a>
+                                </button>
                             </li>
-                            <li className="cs-li">
-                                <a href="#portfolio" className="cs-li-link">
+                            <li className="cs-li" onClick={() => scrollToSection("portfolio")}>
+                            <button className={`cs-li-link ${activeSection === 'portfolio' ? 'cs-active' : ''}`}>
                                     PORTFOLIO
-                                </a>
+                                </button>
                             </li>
                         </ul>
                     </div>

@@ -32,15 +32,31 @@ export default function PortfolioLeadForm() {
   const [error, setError] = useState("");
   const [submitted, setSubmitted] = useState(false);
 
+  function formatPhone(value: any) {
+    const cleaned = value.replace(/\D/g, '').slice(0, 10); // only digits, max 10
+    if (cleaned === '') return '';
+    if (cleaned.length < 4) return `(${cleaned}`;
+    if (cleaned.length < 7) return `(${cleaned.slice(0,3)}) ${cleaned.slice(3)}`;
+    return `(${cleaned.slice(0,3)}) ${cleaned.slice(3,6)}-${cleaned.slice(6)}`;
+  }
+  
+
   function handleChange(
-    e: React.ChangeEvent<
-      HTMLInputElement | HTMLTextAreaElement
-    >
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) {
-    setForm({ ...form, [e.target.name]: e.target.value });
+    const { name, value } = e.target;
+    if (name === "phone") {
+      // Strip all non-digits
+      let sanitized = value.replace(/\D/g, "");
+      // Limit to 10 digits max
+      if (sanitized.length > 10) sanitized = sanitized.slice(0, 10);
+      setForm({ ...form, [name]: sanitized });
+    } else {
+      setForm({ ...form, [name]: value });
+    }
     setError("");
   }
-
+  
   function handleTypeChange(value: string) {
     setForm((prev) => ({ ...prev, type: value }));
     setError("");
@@ -127,7 +143,7 @@ export default function PortfolioLeadForm() {
           id="phone"
           name="phone"
           type="tel"
-          value={form.phone}
+          value={formatPhone(form.phone)}
           onChange={handleChange}
           placeholder="(000) 000-0000"
           className = "rounded-none border border-black field"

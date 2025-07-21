@@ -39,7 +39,7 @@ export const Footer = () => {
                 <a className="cs-contact-link" href="tel: 352-806-2695">(352) 806-2695</a>
             </li>
             <li className="cs-contact-li">
-                <a className="cs-contact-link" href="mailto:info@vynohradovashoots.com">info@vynohradovashoots.com</a>
+                <a className="cs-contact-link" href="mailto:info@vynohradovashoots.com">info@ellvinogradova.com</a>
             </li>
         </ul>
         <span className="brand">Powered by <div className="lilspacer"></div><img src={nexaDevLogo} className="logo" alt="" /><strong>exaDev</strong></span>

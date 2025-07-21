@@ -802,6 +802,8 @@
         color: inherit;              /* Don’t change color on hover */
         text-decoration: underline;
         text-underline-offset: 6px;
+        transform: scale(1.1);
+        transition: 0.2s ease-out;
     }
     #cs-navigation .cs-li-link.cs-active {
       font-weight: 700;

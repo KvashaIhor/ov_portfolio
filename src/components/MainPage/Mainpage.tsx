@@ -9,9 +9,11 @@ interface MenuProps {
   isOpenMenu: boolean;
   handleMenuChange: (value: boolean) => void;
   handleOpenModal: (value: boolean) => void;
+  scrollToSection: (section: string) => void;
+  activeSection: string;
 }
 
-export const Mainpage = ({isOpenMenu, handleMenuChange, handleOpenModal}: MenuProps) => {
+export const Mainpage = ({isOpenMenu, handleMenuChange, handleOpenModal, scrollToSection, activeSection}: MenuProps) => {
     const vhRef = useFixVH();
     useEffect(() => {
         startTimer('timer');
@@ -21,7 +23,7 @@ export const Mainpage = ({isOpenMenu, handleMenuChange, handleOpenModal}: MenuPr
     <>
         <a id="close"></a>
         <section ref={vhRef} className="header">
-          <div className="navbar-sticky"><Navbar handleModal={handleOpenModal}/></div>
+          <div className="navbar-sticky"><Navbar handleModal={handleOpenModal} scrollToSection={scrollToSection} activeSection={activeSection}/></div>
           <div className="hero__container">
             <div className="rec">
                     <div className="rec__circle"></div>

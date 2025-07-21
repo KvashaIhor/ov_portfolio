@@ -6,7 +6,7 @@ export const sendToTelegram = async (formData: {
     message: string;
   }) => {
     const token = '6091325049:AAHitQDKgnKiIIbl4tNZCCQtGavSc5cKT2o'; // Replace with your bot token
-    const chatId = '242445889';  // Replace with your Telegram user ID or channel ID
+    const chatId = '-4874071495';  // Replace with your Telegram user ID or channel ID
   
     const text = `
   📬 *New Contact Form Submission*
