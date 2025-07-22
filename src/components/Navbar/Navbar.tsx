@@ -36,7 +36,8 @@ type NavbarProps = {
                             <button className={`cs-li-link ${activeSection === 'home' ? 'cs-active' : ''}`}
                             onClick={() => {
                                 scrollToSection("home")
-                                setMenuOpen(false)}}>
+                                setMenuOpen(false)
+                                document.body.classList.remove("cs-open");}}>
                                     HOME
                                 </button>
                             </li>
@@ -44,7 +45,8 @@ type NavbarProps = {
                             <button className={`cs-li-link ${activeSection === 'about' ? 'cs-active' : ''}`}
                             onClick={() => {
                                 scrollToSection("about")
-                                setMenuOpen(false)}}>
+                                setMenuOpen(false)
+                                document.body.classList.remove("cs-open");}}>
                                     ABOUT ME
                                 </button>
                             </li>
@@ -52,7 +54,8 @@ type NavbarProps = {
                             <button className={`cs-li-link ${activeSection === 'services' ? 'cs-active' : ''}`}
                             onClick={() => {
                                 scrollToSection("services")
-                                setMenuOpen(false)}}>
+                                setMenuOpen(false)
+                                document.body.classList.remove("cs-open");}}>
                                     SERVICES
                                 </button>
                             </li>
@@ -60,7 +63,8 @@ type NavbarProps = {
                             <button className={`cs-li-link ${activeSection === 'portfolio' ? 'cs-active' : ''}`}
                             onClick={() => {
                                 scrollToSection("portfolio")
-                                setMenuOpen(false)}}>
+                                setMenuOpen(false)
+                                document.body.classList.remove("cs-open");}}>
                                     PORTFOLIO
                                 </button>
                             </li>
