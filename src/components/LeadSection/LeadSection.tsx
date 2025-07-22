@@ -79,7 +79,6 @@ export default function PortfolioLeadForm() {
         <p className="text-gray-700">Your inquiry was received. I’ll get back to you soon.</p>
       </div>
       <div className="spacer"></div>
-      <Footer/>
       </div>
     );
 

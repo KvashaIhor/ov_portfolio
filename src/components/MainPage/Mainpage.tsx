@@ -19,6 +19,8 @@ export const Mainpage = ({isOpenMenu, handleMenuChange, handleOpenModal, scrollT
         startTimer('timer');
       }, []);
 
+    const [currentFormat, setCurrentFormat] = useState('4K');
+
     return (
     <>
         <a id="close"></a>
@@ -30,6 +32,22 @@ export const Mainpage = ({isOpenMenu, handleMenuChange, handleOpenModal, scrollT
                     <p className="rec__rec">REC</p>
             </div>
             <div className="battery">
+            </div>
+            <div className="raw"><p className="raw__raw">RAW</p></div>
+            <div className="format">
+              <button 
+              className={currentFormat == 'HD' ? "format_single-active" : "format_single"}
+              onClick = {() => setCurrentFormat('HD')}>
+                <p className="format_name">HD</p>
+              </button>
+              <div className={currentFormat == '4K' ? "format_single-active" : "format_single"}
+              onClick = {() => setCurrentFormat('4K')}>
+                <p className="format_name">4K</p>
+              </div>
+              <div className={currentFormat == '8K' ? "format_single-active" : "format_single"}
+              onClick = {() => setCurrentFormat('8K')}>
+                <p className="format_name">8K</p>
+              </div>
             </div>
             <div className="hero__photographer"></div>
             <div className="header__titles">
