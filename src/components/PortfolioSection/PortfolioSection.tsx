@@ -4,25 +4,27 @@ import { MasonryPhotoAlbum } from "react-photo-album";
 import { Card, CardContent } from "../ui/card";
 
 import img1 from '../../assets/img1.png'
-import personal_2 from '../../assets/personal/personal_1.webp'
-import personal_1 from '../../assets/personal/personal_2.webp'
-import personal_3 from '../../assets/personal/personal_3.webp'
-import personal_4 from '../../assets/personal/personal_4.webp'
-import personal_5 from '../../assets/personal/personal_5.webp'
-import personal_6 from '../../assets/personal/personal_6.webp'
-
-import commercial_1 from '../../assets/commercial/commercial_1.webp'
-import commercial_2 from '../../assets/commercial/commercial_2.webp'
-import commercial_3 from '../../assets/commercial/commercial_3.webp'
-import commercial_4 from '../../assets/commercial/commercial_4.webp'
-import commercial_5 from '../../assets/commercial/commercial_5.webp'
-import commercial_6 from '../../assets/commercial/commercial_6.webp'
 import img3 from '../../assets/img3.png'
 
 type photoType = 'personal' | 'commercial' | 'weddings'
 
-const personalSet = [personal_6, personal_2, personal_3, personal_4, personal_1, personal_5];
-const commercialSet = [commercial_2, commercial_3, commercial_1, commercial_4, commercial_5, commercial_6];
+const commercialSet = [
+    '/commercial/commercial_1.webp',
+    '/commercial/commercial_2.webp',
+    '/commercial/commercial_3.webp',
+    '/commercial/commercial_4.webp',
+    '/commercial/commercial_5.webp',
+    '/commercial/commercial_6.webp'
+  ];
+  
+  const personalSet = [
+    '/personal/personal_1.webp',
+    '/personal/personal_2.webp',
+    '/personal/personal_3.webp',
+    '/personal/personal_4.webp',
+    '/personal/personal_5.webp',
+    '/personal/personal_6.webp'
+  ];
 const weddingsSet = [img3, img3, img3, img3, img3, img3];
 
 export const PortfolioSection = () => {
