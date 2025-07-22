@@ -4,6 +4,7 @@ import {startTimer} from '../../utils/timer';
 import useFixVH from "../../utils/useFixVH";
 import { ContainerTextFlip } from "../ui/containter-text-flip";
 import { Navbar } from "../Navbar/Navbar";
+import bgPhoto from './images/background-photographer.webp'
 
 interface MenuProps {
   isOpenMenu: boolean;
@@ -35,11 +36,11 @@ export const Mainpage = ({isOpenMenu, handleMenuChange, handleOpenModal, scrollT
             </div>
             <div className="raw"><p className="raw__raw">RAW</p></div>
             <div className="format">
-              <button 
+              <div 
               className={currentFormat == 'HD' ? "format_single-active" : "format_single"}
               onClick = {() => setCurrentFormat('HD')}>
                 <p className="format_name">HD</p>
-              </button>
+              </div>
               <div className={currentFormat == '4K' ? "format_single-active" : "format_single"}
               onClick = {() => setCurrentFormat('4K')}>
                 <p className="format_name">4K</p>
@@ -49,7 +50,16 @@ export const Mainpage = ({isOpenMenu, handleMenuChange, handleOpenModal, scrollT
                 <p className="format_name">8K</p>
               </div>
             </div>
-            <div className="hero__photographer"></div>
+            <div className="hero__photographer">
+            <img
+                src={bgPhoto}
+                alt="Photographer"
+                fetchPriority="high"
+                width="2957"
+                height="5350"
+                className="hero-img"
+              />
+            </div>
             <div className="header__titles">
                 <div className="header__title"><ContainerTextFlip/></div>
                 <div className="header__subtitle">that you need</div>
