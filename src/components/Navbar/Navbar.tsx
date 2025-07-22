@@ -32,23 +32,35 @@ type NavbarProps = {
                     </button>
                      <div className="cs-ul-wrapper">
                         <ul id="cs-expanded" className="cs-ul" aria-expanded="false">
-                            <li className="cs-li" onClick={() => scrollToSection("home")}>
-                            <button className={`cs-li-link ${activeSection === 'home' ? 'cs-active' : ''}`}>
+                            <li className="cs-li">
+                            <button className={`cs-li-link ${activeSection === 'home' ? 'cs-active' : ''}`}
+                            onClick={() => {
+                                scrollToSection("home")
+                                setMenuOpen(false)}}>
                                     HOME
                                 </button>
                             </li>
-                            <li className="cs-li" onClick={() => scrollToSection("about")}>
-                            <button className={`cs-li-link ${activeSection === 'about' ? 'cs-active' : ''}`}>
+                            <li className="cs-li">
+                            <button className={`cs-li-link ${activeSection === 'about' ? 'cs-active' : ''}`}
+                            onClick={() => {
+                                scrollToSection("about")
+                                setMenuOpen(false)}}>
                                     ABOUT ME
                                 </button>
                             </li>
-                            <li className="cs-li" onClick={() => scrollToSection("services")}>
-                            <button className={`cs-li-link ${activeSection === 'services' ? 'cs-active' : ''}`}>
+                            <li className="cs-li">
+                            <button className={`cs-li-link ${activeSection === 'services' ? 'cs-active' : ''}`}
+                            onClick={() => {
+                                scrollToSection("services")
+                                setMenuOpen(false)}}>
                                     SERVICES
                                 </button>
                             </li>
-                            <li className="cs-li" onClick={() => scrollToSection("portfolio")}>
-                            <button className={`cs-li-link ${activeSection === 'portfolio' ? 'cs-active' : ''}`}>
+                            <li className="cs-li">
+                            <button className={`cs-li-link ${activeSection === 'portfolio' ? 'cs-active' : ''}`}
+                            onClick={() => {
+                                scrollToSection("portfolio")
+                                setMenuOpen(false)}}>
                                     PORTFOLIO
                                 </button>
                             </li>
