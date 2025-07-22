@@ -9,21 +9,21 @@ import img3 from '../../assets/img3.png'
 type photoType = 'personal' | 'commercial' | 'weddings'
 
 const commercialSet = [
-    '/commercial/commercial_1.webp',
     '/commercial/commercial_2.webp',
     '/commercial/commercial_3.webp',
+    '/commercial/commercial_1.webp',
     '/commercial/commercial_4.webp',
     '/commercial/commercial_5.webp',
     '/commercial/commercial_6.webp'
   ];
   
   const personalSet = [
-    '/personal/personal_1.webp',
+    '/personal/personal_6.webp',
     '/personal/personal_2.webp',
     '/personal/personal_3.webp',
     '/personal/personal_4.webp',
-    '/personal/personal_5.webp',
-    '/personal/personal_6.webp'
+    '/personal/personal_1.webp',
+    '/personal/personal_5.webp'
   ];
 const weddingsSet = [img3, img3, img3, img3, img3, img3];
 
