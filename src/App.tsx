@@ -76,7 +76,7 @@ function App() {
       <div ref={portfolioRef}>
       <PortfolioSection />
       </div>
-      <PortfolioLeadForm />
+      <PortfolioLeadForm/>
       <Footer/>
       {isLeadFormOpen && (
         <div className="fixed inset-0 z-[10050] flex items-center justify-center p-4">
@@ -93,7 +93,7 @@ function App() {
                 <span className="x">✕</span>
               </Button>
             {/* Header */}
-            <PortfolioLeadForm/>
+            <PortfolioLeadForm hideTypeSelect/>
           </div>
         </div>
       )}

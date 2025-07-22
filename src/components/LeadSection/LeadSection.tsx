@@ -21,7 +21,7 @@ const shootTypes = [
   "Other",
 ];
 
-export default function PortfolioLeadForm() {
+export default function PortfolioLeadForm({ hideTypeSelect = false }) {
 
   const [form, setForm] = useState({
     name: "",
@@ -120,22 +120,6 @@ export default function PortfolioLeadForm() {
         />
       </div>
 
-      {/*<div className="space-y-1">
-        <Label htmlFor="email">
-          Email<span className="text-red-500">*</span>
-        </Label>
-        <Input
-          id="email"
-          name="email"
-          type="email"
-          value={form.email}
-          onChange={handleChange}
-          placeholder="ex: myname@example.com"
-          required
-          className = "rounded-none border border-black"
-        />
-  </div>*/}
-
       <div className="space-y-1">
         <Label htmlFor="phone" className = "fieldlabel">Phone number:<span className="text-red-500">*</span></Label>
         <Input
@@ -149,7 +133,7 @@ export default function PortfolioLeadForm() {
         />
       </div>
 
-      <div className="space-y-1">
+      {!hideTypeSelect && <div className="space-y-1">
       <FormControl fullWidth
   sx={{
     '& .MuiOutlinedInput-root': {
@@ -200,19 +184,7 @@ export default function PortfolioLeadForm() {
 </FormControl>
 
 
-      </div>
-
-      {/*<div className="space-y-1">
-        <Label htmlFor="date">Preferred date</Label>
-        <Input
-          id="date"
-          name="date"
-          type="date"
-          value={form.date}
-          onChange={handleChange}
-          className = "rounded-none border border-black"
-        />
-    </div>*/}
+      </div>}
 
       <div className="space-y-1">
         <Label className = "fieldlabel" htmlFor="message">Comment:</Label>
