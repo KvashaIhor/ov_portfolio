@@ -5,8 +5,13 @@ export const sendToTelegram = async (formData: {
     service: string;
     message: string;
   }) => {
-    const token = '6091325049:AAHitQDKgnKiIIbl4tNZCCQtGavSc5cKT2o'; 
-    const chatId = '-4874071495'; 
+    const token = process.env.REACT_APP_TELEGRAM_BOT_TOKEN;
+    const chatId = process.env.REACT_APP_TELEGRAM_CHAT_ID;
+
+    if (!token || !chatId) {
+      console.error('Telegram configuration missing. Please check your environment variables.');
+      return false;
+    } 
   
     const text = `
   📬 *New Contact Form Submission*

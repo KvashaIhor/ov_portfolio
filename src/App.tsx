@@ -7,6 +7,7 @@ import { PortfolioSection } from "./components/PortfolioSection/PortfolioSection
 import PortfolioLeadForm from "./components/LeadSection/LeadSection"
 import { Button } from "../src/components/ui/button"
 import { Footer } from "./components/Footer/Footer";
+import './utils/validateEnv';
 
 function App() {
   const [isOpenMenu, setIsOpenMenu] = useState(false);
