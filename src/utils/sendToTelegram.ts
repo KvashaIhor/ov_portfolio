@@ -1,12 +1,12 @@
-// utils/sendToTelegram.ts
+
 export const sendToTelegram = async (formData: {
     name: string;
     phone: string;
     service: string;
     message: string;
   }) => {
-    const token = '6091325049:AAHitQDKgnKiIIbl4tNZCCQtGavSc5cKT2o'; // Replace with your bot token
-    const chatId = '-4874071495';  // Replace with your Telegram user ID or channel ID
+    const token = '6091325049:AAHitQDKgnKiIIbl4tNZCCQtGavSc5cKT2o'; 
+    const chatId = '-4874071495'; 
   
     const text = `
   📬 *New Contact Form Submission*
@@ -16,7 +16,7 @@ export const sendToTelegram = async (formData: {
   📝 *Message:*\n${formData.message}
   `;
   
-    const url = `https://api.telegram.org/bot${token}/sendMessage`;
+    const url = `https://api.telegram.org/bot${token}/sendMessage`;//api.telegram.org/bot${token}/sendMessage`;
   
     try {
       const res = await fetch(url, {

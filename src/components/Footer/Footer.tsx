@@ -1,6 +1,6 @@
 import React from 'react';
 import './Footer.css';
-import nexaDevLogo from "../Footer/nexadev_logo.png"
+import nexaDevLogo from "./nexadev_logo.png"
 
 export const Footer = () => {
     return (

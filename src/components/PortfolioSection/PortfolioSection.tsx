@@ -45,21 +45,14 @@ export const PortfolioSection = () => {
                     setCurrentType('commercial')
                     setCurrentPhotosDisplay(commercialSet);
                 }}>COMMERCIAL PHOTOGRAPHY</div>
-                {/*<div className={currentType === 'weddings' ? "nav-tab nav-tab--active" : 'nav-tab'} 
-                onClick ={() => {
-                    setCurrentType('weddings')
-                    setCurrentPhotosDisplay(weddingsSet);
-                }}>WEDDINGS</div>*/}
             </div>
         </div>
-        {/* Mobile Block */}
         <div className="gallerymobile w-full max-w-screen-xl mx-auto space-y-2 p-4">
-  {/* Full Width Block */}
   <div className="image-large">
   <img src={currentPhotosDisplay[0]} className="absolute inset-0 w-full h-full object-cover" alt="" />
   </div>
 
-  {/* Two Half Widths */}
+  
   <div className="flex flex-row md:flex-row gap-4">
     <div className="w-full md:w-1/2 h-64 bg-gray-400 relative overflow-hidden">
     <img src={currentPhotosDisplay[1]} className="absolute inset-0 w-full h-full object-cover" alt="" />
@@ -69,12 +62,10 @@ export const PortfolioSection = () => {
     </div>
   </div>
 
-  {/* Full Width Block */}
   <div className="image-large">
   <img src={currentPhotosDisplay[3]} className="absolute inset-0 w-full h-full object-cover" alt="" />
   </div>
 
-  {/* Two Half Widths */}
   <div className="flex flex-row md:flex-row gap-4">
     <div className="w-full md:w-1/2 h-64 bg-gray-400 relative overflow-hidden">
     <img src={currentPhotosDisplay[4]} className="absolute inset-0 w-full h-full object-cover" alt="" />
@@ -84,9 +75,7 @@ export const PortfolioSection = () => {
     </div>
   </div>
 </div>
-        {/* Desktop Block */}
         <div className="galleryfull">
-  {/* Full Width Block */}
   <div className="image-large">
   <img src={currentPhotosDisplay[0]} className="picture" alt="" />
   </div>

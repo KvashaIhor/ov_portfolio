@@ -1,6 +1,6 @@
 html, body, #root {
-    height: 100vw; /* Important for height to propagate down */
-    overflow-x: hidden; /* Prevent horizontal scroll */
+    height: 100vw; 
+    overflow-x: hidden; 
     background-color: #fafafa;
   }
 

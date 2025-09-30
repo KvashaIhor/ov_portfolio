@@ -16,7 +16,7 @@
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center bottom;
-    left: 50%; // Center the element's left edge
+    left: 50%;
     transform: translateX(-50%)
   }
 }
@@ -109,8 +109,6 @@
       justify-content: center;
       width: 30px;
       height: 20px;
-      //background-color: black;
-      //color: white;
       color: black;
       border-radius: 5px;
 
@@ -194,8 +192,8 @@
     &__titles {
         display: flex;
         flex-direction: column;
-        align-items: stretch; /* Important: children will now stretch to full width */
-        width: clamp(300px, 85vw, 1000px); // Example
+        align-items: stretch;
+        width: clamp(300px, 85vw, 1000px);
         position: absolute;
         top: 90px;
         left: 50%;
@@ -211,7 +209,7 @@
 
     &__title {
         width: 100%;
-        text-align: center; // or left/right depending on your layout
+        text-align: center;
         line-height: 0.3rem;
         margin: 0;
         font-weight: 700;
@@ -223,7 +221,7 @@
         font-weight: 600;
         width: 100%;
         text-align: right;
-        padding-right: 20px; // or left/right depending on your layout
+        padding-right: 20px;
         line-height: 1.1;
         margin: 0;
         font-size: clamp(2rem, 6vw, 10rem)
@@ -315,7 +313,6 @@
 
   
 
-/* From Uiverse.io by Cevorob */ 
 .contactme {
     left: 20px;
     position: relative;
@@ -329,8 +326,8 @@
     white-space: nowrap;
     transition: all .05s linear;
     font-family: inherit;
-    display: flex;                  // ⬅️ layout fix
-    justify-content: center;       // ⬅️ center horizontally
+    display: flex; 
+    justify-content: center;
     align-items: center; 
    }
    
@@ -392,9 +389,9 @@
 
   .navbar-sticky {
     width: 100%;
-    display: block;  /* or flex, but use justify-content: center/space-between as needed */
-    position: relative; /* Or static, as needed */
-    left: 0;  /* Ensures not shifted by parent */
+    display: block;
+    position: relative;
+    left: 0;
     }
 
 @media (min-width: 1023px) {
@@ -413,8 +410,8 @@
 
     &__addresses {
       display: flex;
-      position: absolute;                      /* centred vertically */
-      right: 120px;                     /* push to the right edge */
+      position: absolute;
+      right: 120px;
       transform: translateY(-50%);
     }
 
@@ -514,8 +511,6 @@
         justify-content: center;
         width: 30px;
         height: 20px;
-        //background-color: black;
-        //color: white;
         color: black;
         border-radius: 5px;
   
@@ -540,13 +535,11 @@
 
     .hero {
       &__photographer {
-        left: auto;            // Remove the center positioning
-        right: 0;              // Snap to the right edge
+        left: auto; 
+        right: 0; 
         transform: none;
         height: 80svh;  
-        width: 30vw;     // Remove translateX centering
-        // Optional: add margin-right for spacing from the edge
-        // margin-right: 40px;
+        width: 30vw;
       }
     }
 

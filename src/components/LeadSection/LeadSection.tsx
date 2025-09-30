@@ -33,7 +33,7 @@ export default function PortfolioLeadForm({ hideTypeSelect = false }) {
   const [submitted, setSubmitted] = useState(false);
 
   function formatPhone(value: any) {
-    const cleaned = value.replace(/\D/g, '').slice(0, 10); // only digits, max 10
+    const cleaned = value.replace(/\D/g, '').slice(0, 10); 
     if (cleaned === '') return '';
     if (cleaned.length < 4) return `(${cleaned}`;
     if (cleaned.length < 7) return `(${cleaned.slice(0,3)}) ${cleaned.slice(3)}`;
@@ -46,9 +46,9 @@ export default function PortfolioLeadForm({ hideTypeSelect = false }) {
   ) {
     const { name, value } = e.target;
     if (name === "phone") {
-      // Strip all non-digits
+      
       let sanitized = value.replace(/\D/g, "");
-      // Limit to 10 digits max
+      
       if (sanitized.length > 10) sanitized = sanitized.slice(0, 10);
       setForm({ ...form, [name]: sanitized });
     } else {
@@ -91,7 +91,7 @@ export default function PortfolioLeadForm({ hideTypeSelect = false }) {
     const formData = {
       name: form.name,
       phone: form.phone,
-      service: form.type, // 'type' in state matches the select
+      service: form.type, 
       message: form.message,
     };
     const sent = await sendToTelegram(formData);

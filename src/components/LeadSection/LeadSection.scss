@@ -7,8 +7,8 @@
     user-select: none;
     white-space: nowrap;
     font-family: inherit;
-    display: flex;                  // ⬅️ layout fix
-    justify-content: center;       // ⬅️ center horizontally
+    display: flex;                  
+    justify-content: center;       
     align-items: center; 
     height: 50px;
    }
@@ -82,15 +82,15 @@
   .leadform-fullscreen {
     min-height: 100vh;
     display: flex;
-    align-items: flex-start;    // align content to the top
+    align-items: flex-start;    
     justify-content: center;
-    padding-top: 64px;          // space from the top (adjust as needed)
+    padding-top: 64px;          
     background: #fafafa;
-    min-height: 100vh;         /* min-h-screen */
-    display: flex;             /* flex */
-    flex-direction: column;    /* flex-col */
-    justify-content: center;   /* justify-center (vertical centering) */
-    align-items: center;       /* items-center (horizontal centering) */
+    min-height: 100vh;         
+    display: flex;             
+    flex-direction: column;    
+    justify-content: center;   
+    align-items: center;       
     width: 100%; 
   }
 

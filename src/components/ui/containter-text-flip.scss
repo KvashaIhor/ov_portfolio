@@ -1,4 +1,4 @@
-// container-text-flip.scss
+
 
 .flip-text-container {
     position: relative;
@@ -10,7 +10,7 @@
 
   
     @media (min-width: 768px) {
-      font-size: 5rem; // md:text-7xl
+      font-size: 5rem; 
     }
   
     &.dark {

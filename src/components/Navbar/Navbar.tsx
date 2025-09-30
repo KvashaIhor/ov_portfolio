@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import logo from '../../images/renuit_logo.png'
 import './Navbar.css';
 
 type NavbarProps = {
@@ -13,7 +12,7 @@ type NavbarProps = {
 
     const toggleMenu = () => {
       setMenuOpen(prev => !prev);
-      document.body.classList.toggle("cs-open", !menuOpen); // prevents scrolling when menu is open
+      document.body.classList.toggle("cs-open", !menuOpen);
     };
 
     return (

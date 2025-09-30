@@ -7,7 +7,7 @@
 
 .about {
     display: grid;
-    grid-template-columns: repeat(12, 1fr); /* Clean 12-col layout */
+    grid-template-columns: repeat(12, 1fr);
     grid-template-rows: repeat(12, 1fr);
     gap: 8px;
     padding: 20px;
@@ -18,10 +18,10 @@
     background-color: #fafafa;
 
     &__title {
-        grid-column: 1 / span 6; /* if you still want it across two columns */
+        grid-column: 1 / span 6;
         grid-row: 1 / span 3;
         font-family: 'Inter', sans-serif;
-        font-size: 18px; /* smoother scaling */
+        font-size: 18px;
         font-weight: 700;
         line-height: 1.1;
         margin: 0;
@@ -202,11 +202,11 @@
         height: 100vh;
         padding: 40px;
         gap: 16px;
-        grid-template-columns: repeat(10, 1fr); /* Clean 12-col layout */
+        grid-template-columns: repeat(10, 1fr);
         grid-template-rows: repeat(10, 1fr);
 
         &__title {
-            grid-column: 1 / span 5; /* if you still want it across two columns */
+            grid-column: 1 / span 5;
             grid-row: 1 / span 3;
             font-size: 80px;
             text-align: right;

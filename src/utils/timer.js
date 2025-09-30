@@ -12,7 +12,7 @@ export function startTimer(targetId = 'timer') {
     const interval = setInterval(() => {
       let elapsed = Date.now() - startTime;
   
-      // ⏱ Reset every 60 seconds
+      
       if (elapsed >= 60000) {
         startTime = Date.now();
         elapsed = 0;
